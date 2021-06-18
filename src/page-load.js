@@ -21,34 +21,46 @@ const loadPage = (() => {
     header.appendChild(headerLabel);
   }
 
+  const contentContainer = document.createElement('div');
+  contentContainer.id = 'content-container';
+  page.appendChild(contentContainer);
+
   const footer = document.createElement('footer');
   footer.textContent = 'Copyright © 2021 jpicardvu';
   footer.id = 'footer';
   body.appendChild(footer);
 
-
-  return {page}
+  return {page, contentContainer}
 })();
 
-const homePage = () => {;
-  const homeContainer = document.createElement('div');
-  homeContainer.id = 'home-container';
-
+const homePage = () => {
   const homeContent = document.createElement('div');
   homeContent.textContent = '\r\nFood fit for a king.\r\nMade with class since 1974.';
   homeContent.id = 'home-content';
-  homeContainer.appendChild(homeContent);
+  loadPage.contentContainer.appendChild(homeContent);
   
   const homeImage = new Image();
   homeImage.src = HomeImage;
   homeImage.id = 'home-image';
-  homeContainer.appendChild(homeImage);
+  loadPage.contentContainer.appendChild(homeImage);
+};
 
-  loadPage.page.insertBefore(homeContainer, loadPage.page.children[2]);
-  //loadPage.page.appendChild(homeContainer);
-}
+const menuPage = () => {
+  const menuContainer = document.createElement('div');
+  menuContainer.id = 'test';
+  loadPage.contentContainer.appendChild(menuContainer);
 
-export {homePage};
+  for (let i = 0; i < 6; i++) {
+    const menuContent = document.createElement('div');
+    menuContent.classList.add('menu-content');
+    menuContent.textContent = 'zzzzzzzzzz';
+    menuContainer.appendChild(menuContent);
+  // diplsay  flex (etch) or grid (TTT)
+  }
+
+};
+
+export {homePage, menuPage};
 
 
 

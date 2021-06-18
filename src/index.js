@@ -1,4 +1,5 @@
-import {homePage} from './page-load.js';
+import {homePage, menuPage} from './page-load.js';
 import '../dist/style.css';
 
-homePage();
+//homePage();
+menuPage();
