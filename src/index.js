@@ -1,1 +1,4 @@
-console.log('test12ss3');
+import {homePage} from './page-load.js';
+import '../dist/style.css';
+
+homePage();

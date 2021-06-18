@@ -1,0 +1,90 @@
+html {
+  font-size: 20px;
+  color: #f9fdf9;
+  font-size: 30px;
+  letter-spacing: 0px;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(12, 41, 10);
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  background-image: url('../dist/images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 61%;
+}
+
+#logo-image {
+  width: 400px;
+  height: 400px;
+}
+
+header {
+  transform: translateY(-200%);
+  left: -0.5%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.header-labels {
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  margin-left: 20px;
+  border-bottom: 2px solid  #f9fdf9;
+}
+
+.header-labels:hover{
+  color: wheat;
+  text-shadow: 2px 2px 2px white;
+  cursor: pointer;
+}
+
+#footer {
+  padding-top: 8px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(12, 41, 10,  1); 
+  color: white;
+  text-align: center;
+  font-size: 19px;
+}
+
+
+#home-container {
+  font-size: 0;
+  margin: auto;
+  white-space: pre;
+  width: 600px;
+  background: rgba(12, 41, 10,  0.5); 
+  margin-bottom: 2px;
+  padding-top: 0px;
+}
+
+#home-content {
+  font-size: 25px;
+  margin-top: 0px;
+  padding-top: 0px;
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+
+#home-image {
+  width: 400px;
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
