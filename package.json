@@ -1,6 +1,7 @@
 {
-  "name": "template",
+  "name": "restaurant-page",
   "version": "1.0.0",
+  "homepage": ".",
   "description": "",
   "private": true,
   "scripts": {
