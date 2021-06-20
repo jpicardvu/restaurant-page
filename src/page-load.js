@@ -1,6 +1,6 @@
 import Logo from './images/logo.jpg'; //done for the sake of trying out stat image imports, importAll function + "img.src=" used in createMenuItem() for efficiency;
 import HomeImage from './images/home.jpg';
-
+console.log('test')
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
@@ -8,7 +8,7 @@ function importAll(r) {
 };
 const importedImages = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
-const loadPage = (() => {
+const loadPage = (() => { //webpack runs through the entire script before bundling (as proven by console.log('test') in line 3 executing), so this modular function is run even without importing to index.js
   const body = document.querySelector('#body');
   const page = document.querySelector('#page');
   
@@ -43,7 +43,7 @@ const loadPage = (() => {
     headerLabel.textContent = headerArray[i];
     header.appendChild(headerLabel);
   }
-
+  
   const contentContainer = document.createElement('div');
   contentContainer.id = 'content-container';
   page.appendChild(contentContainer);
