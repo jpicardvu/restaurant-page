@@ -18,7 +18,7 @@ body {
   margin: auto;
   text-align: center;
   width: 100%;
-  background-image: url('../dist/images/background.jpg');
+  background-image: url('../src/images/background.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 61%;
@@ -70,7 +70,7 @@ header {
   width: 600px;
   background: rgba(12, 41, 10,  0.5); 
   margin-bottom: 2px;
-  height: 657px;
+  min-height: 657px;
 }
 
 #home-content {
@@ -87,3 +87,32 @@ header {
   opacity: 1;
 }
 
+#menu-container {
+  padding-top: 20px;
+  width: 600px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.menu-items {
+  display: flex;
+  background: rgba(109, 90, 66, 0.5);
+  padding: 8.5px 5px 5px 8.5px;
+  margin-bottom: 5px;
+  border-style: outset;
+  border-color: #f9fdf9;
+  white-space: normal
+}
+
+.menu-items > span:nth-child(2) {
+  flex-grow: 2;
+}
+
+.item-img {
+  align-self: flex-start;  
+  border-style:ridge;
+  border-color: #f9fdf9;
+  width:110px;
+  height: 110px;
+  margin-right: 8.5px;
+}
