@@ -135,6 +135,3 @@ const createMenuItem = (name, description, price) => {
 }
 
 export {homePage, contactPage, menuPage};
-
-
-
