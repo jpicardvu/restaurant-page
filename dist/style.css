@@ -69,7 +69,7 @@ header {
   white-space: pre;
   background: rgba(12, 41, 10,  0.5); 
   margin-bottom: 2px;
-  min-height: 657px;
+  height: 657px;
   width: 600px;
   animation: fadeIn 1s;
 }
