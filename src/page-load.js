@@ -24,7 +24,7 @@ const loadPage = (() => { //webpack runs through the entire script before bundli
     const headerArray = ['Home', 'Menu', 'Contact'];
     const buttonArray = ['homePage', 'menuPage', 'contactPage'];
     const headerLabel = document.createElement('span');
-    window.headerLabel = headerLabel;
+    //window.headerLabel = headerLabel;
     
     headerLabel.onclick = () => {
       switch(i) {
