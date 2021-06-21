@@ -71,6 +71,7 @@ header {
   background: rgba(12, 41, 10,  0.5); 
   margin-bottom: 2px;
   min-height: 657px;
+  animation: fadeIn 1s;
 }
 
 #home-content {
@@ -79,19 +80,22 @@ header {
   padding-top: 0px;
   line-height: 25px;
   margin-bottom: 5px;
+  animation: fadeIn 1s;
 }
 
 #home-image {
   width: 400px;
   margin-bottom: 45px;
   opacity: 1;
+  animation: fadeIn 1s;
 }
 
-#menu-container {
+#menu-content {
   padding-top: 20px;
   width: 600px;
   font-size: 15px;
   font-weight: bold;
+  animation: fadeIn 1s;
 }
 
 .menu-items {
@@ -115,4 +119,50 @@ header {
   width:110px;
   height: 110px;
   margin-right: 8.5px;
+}
+
+#contact-content {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-left: 14px;
+  animation: fadeIn 1s;
+}
+
+#map-img {
+  border-style:ridge;
+  border-color: wheat;
+  opacity: 0.85;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
 }
