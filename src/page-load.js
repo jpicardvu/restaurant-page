@@ -22,10 +22,8 @@ const loadPage = (() => { //webpack runs through the entire script before bundli
   
   for (let i = 0; i < 3; i++){
     const headerArray = ['Home', 'Menu', 'Contact'];
-    const buttonArray = ['homePage', 'menuPage', 'contactPage'];
-    const headerLabel = document.createElement('span');
-    //window.headerLabel = headerLabel;
-    
+    const headerLabel = document.createElement('span'); 
+    console.log('test');    
     headerLabel.onclick = () => {
       switch(i) {
         case 0:
@@ -38,6 +36,12 @@ const loadPage = (() => { //webpack runs through the entire script before bundli
           contactPage();
           break;
       }
+      //if (contentContainer.style.opacity == 0) {
+      //  contentContainer.style.opacity = 1;
+      //}
+      //else {
+      //  contentContainer.style.opacity = 0;       
+      //}
     }
 
     headerLabel.classList.add('header-labels');
@@ -58,6 +62,8 @@ const loadPage = (() => { //webpack runs through the entire script before bundli
 })();
 
 const homePage = () => {
+  loadPage.contentContainer.textContent = '';
+
   const homeContent = document.createElement('div');
   homeContent.textContent = '\r\nFood fit for a king.\r\nMade with class since 1974.';
   homeContent.id = 'home-content';
@@ -70,20 +76,26 @@ const homePage = () => {
 };
 
 const contactPage = () => {
+  loadPage.contentContainer.textContent = '';
+  
   const contactContent = document.createElement('div');
-  contactContent.textContent = '\r\nFood fit for a king.\r\nMade with class since 1974.';
+  contactContent.textContent = '\r\nPhone: 1-800-123-4567.\r\nAddress: 123 45th Street, Manhattan, NY 10036, United States';
   contactContent.id = 'contact-content';
   loadPage.contentContainer.appendChild(contactContent);
-  
-  //GOOGLE MAPS const homeImage = new Image();
-  //homeImage.src = HomeImage;
-  //homeImage.id = 'home-image';
-  //loadPage.contentContainer.appendChild(homeImage);
+
+  const mapImg = document.createElement('img');
+  mapImg.src = importedImages['map.png'];
+  mapImg.id = 'map-img';
+  mapImg.classList.add('load');
+  loadPage.contentContainer.appendChild(mapImg);
+
 };
 
 const menuPage = () => {
-  const menuContainer = document.createElement('div');
-  menuContainer.id = 'menu-container';
+  loadPage.contentContainer.textContent = '';
+
+  const menuContent = document.createElement('div');
+  menuContent.id = 'menu-content';
   
   const steak = createMenuItem('USDA Prime Steak', 
                                 'Triple AAA grain-fed beef, served with a side of garlic mashed potatoes and steamed vegetables',
@@ -98,12 +110,12 @@ const menuPage = () => {
                                 'Fresh Atlantic salmon grilled to perfection, served with a side of basmati rice and asparagus',
                                 '$69');
   
-  menuContainer.appendChild(steak);
-  menuContainer.appendChild(lobster);
-  menuContainer.appendChild(oysters);
-  menuContainer.appendChild(salmon);
+  menuContent.appendChild(steak);
+  menuContent.appendChild(lobster);
+  menuContent.appendChild(oysters);
+  menuContent.appendChild(salmon);
 
-  loadPage.contentContainer.appendChild(menuContainer);
+  loadPage.contentContainer.appendChild(menuContent);
 };
 
 const createMenuItem = (name, description, price) => {
@@ -135,4 +147,4 @@ const createMenuItem = (name, description, price) => {
   return itemDiv
 }
 
-export {homePage, contactPage, menuPage};
+export {homePage};
