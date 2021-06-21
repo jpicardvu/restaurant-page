@@ -19,11 +19,12 @@ const loadPage = (() => { //webpack runs through the entire script before bundli
   
   const header = document.createElement('header');
   page.appendChild(header);
-
+  
   for (let i = 0; i < 3; i++){
     const headerArray = ['Home', 'Menu', 'Contact'];
     const buttonArray = ['homePage', 'menuPage', 'contactPage'];
     const headerLabel = document.createElement('span');
+    window.headerLabel = headerLabel;
     
     headerLabel.onclick = () => {
       switch(i) {
