@@ -160,10 +160,3 @@ header {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
-@media only screen and (max-width: 400px) {
-  body {
-    background-color: lightblue;
-    width: 50%;
-  }
-}
